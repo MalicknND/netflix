@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BackgroundImage from "../../../public/images/background.jpg";
 import Logo from "../../../public/images/logonetflix.png";
+import Link from "next/link";
 export default function AuthLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -13,14 +14,16 @@ export default function AuthLayout({
         priority
         fill
       />
-      <Image
-        src={Logo}
-        alt="Logonetnetflix image"
-        width={120}
-        height={120}
-        className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
-        priority
-      />
+      <Link href="/">
+        <Image
+          src={Logo}
+          alt="Logonetnetflix image"
+          width={120}
+          height={120}
+          className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
+          priority
+        />
+      </Link>
       {children}
     </div>
   );
