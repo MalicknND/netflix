@@ -73,7 +73,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="mx-60 mb-20">
+      <section className="">
         <AccordionDemo />
       </section>
       <section>
