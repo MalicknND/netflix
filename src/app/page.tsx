@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../public/images/logonetflix.png";
 import { AccordionDemo } from "../components/Accordion/Accordion";
 import Footer from "@/components/partials/footer/Footer";
 import Header from "@/components/partials/header/Header";
@@ -11,32 +10,35 @@ import { ChevronRight } from "lucide-react";
 export default function Home() {
   return (
     <div>
-      <div className="relative h-[36rem] md:h-[36rem] bg-[url('/images/background.jpg')] bg-cover bg-center">
+      <div className="relative h-[36rem] md:h-[36rem] bg-[url('/images/background.jpg')] bg-cover bg-center overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <Header />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center mt-10">
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center mt-10 px-4">
           <h1 className="text-white font-bold text-[1.5rem] mt-4 mb-4 sm:text-[3rem]">
             Films et séries en illimité, et bien plus
           </h1>
-          <p className="text-white text-[1.3rem] mb-4 ">
+          <p className="text-white text-[1.3rem] mb-4">
             Où que vous soyez. Annulez à tout moment.
           </p>
-          <div className="mt-1.5 mx-0 ">
+          <div className="mt-1.5 mx-0">
             <p className="text-white text-[1rem] mb-4">
               Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous
               abonner ou réactiver votre <br />
               abonnement.
             </p>
           </div>
-          <div className="flex flex-col gap-4  md:flex md:flex-row md:items-center md:justify-center md:gap-4">
+          <div className="flex flex-col gap-4 md:flex md:flex-row md:items-center md:justify-center md:gap-4 w-full max-w-md">
             <Input
               type="email"
               name="email"
               placeholder="Adresse e-mail"
-              className="bg-[#333] placeholder:text-xs placeholder:text-gray-400 font-semibold w-full inline-block py-[1.55rem]  pr-[4.25rem] bg-transparent border border-gray-400 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+              className="bg-[#333] placeholder:text-xs placeholder:text-gray-400 font-semibold w-full py-[1.55rem] bg-transparent border border-gray-400 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
               required
             />
-            <Button variant="destructive" className="py-[1.55rem] bg-[#E50815]">
+            <Button
+              variant="destructive"
+              className="py-[1.55rem] bg-[#E50815] flex items-center justify-center"
+            >
               Commencer
               <ChevronRight />
             </Button>
@@ -48,7 +50,7 @@ export default function Home() {
           style={{
             background: `radial-gradient(51.39% 511.66% at 47.68% -217.91%,#ff9900 0%, #e50914 17.27%,#0e1b4f 79.44%,#000413 100%)`,
           }}
-          className="flex flex-col md:flex-row relative justify-center bg-[rgb(14,27,79)] shadow-[0px_-8px_25px_rgba(0,0,0,0.5)] rounded-md mx-[20px] md:mx-[74px] text-white p-[22px]"
+          className="flex flex-col md:flex-row relative justify-center bg-[rgb(14,27,79)] shadow-[0px_-8px_25px_rgba(0,0,0,0.5)] rounded-md mx-4 md:mx-[74px] text-white p-[22px]"
         >
           <div className="flex justify-center md:justify-start md:mr-8 mb-4 md:mb-0">
             <Image
@@ -73,8 +75,8 @@ export default function Home() {
       </div>
 
       {/* First Section */}
-      <section className="py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-flow-col mx-4 md:mx-40 items-center gap-8 md:gap-0 mb-20">
+      <section className="py-8 border-t-8 border-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-40 items-center gap-8 mb-20">
           <div>
             <h2 className="text-3xl md:text-5xl mb-5">
               Regardez Netflix sur votre TV
@@ -96,7 +98,7 @@ export default function Home() {
               muted
               autoPlay
               loop
-              className="absolute top-[15%] left-[12%] w-[76%] h-[70%] object-cover -z-10"
+              className="absolute top-[15%] left-[12%] w-[76%] h-[70%] object-cover"
             >
               <source
                 src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
@@ -109,8 +111,8 @@ export default function Home() {
       </section>
 
       {/* Second Section */}
-      <section className="border-t-8  border-neutral-900 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-flow-col mx-4 md:mx-60 items-center gap-8 md:gap-0 mb-20">
+      <section className="border-t-8 border-neutral-900 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-60 items-center gap-8 mb-20">
           <div className="relative w-full md:w-auto">
             <Image
               src="/images/device-pile.png"
@@ -131,8 +133,8 @@ export default function Home() {
       </section>
 
       {/* Third Section */}
-      <section className="border-t-8  border-neutral-900 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-flow-col mx-4 md:mx-60 items-center gap-8 md:gap-0 mb-20">
+      <section className="border-t-8 border-neutral-900 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-60 items-center gap-8 mb-20">
           <div className="relative w-full md:w-auto">
             <Image
               src="/images/child.png"
@@ -156,12 +158,12 @@ export default function Home() {
       </section>
 
       {/* Accordion */}
-      <section className="border-t-8  border-neutral-900 py-8">
+      <section className="border-t-8 border-neutral-900 py-8">
         <AccordionDemo />
       </section>
 
       {/* Fourth Section */}
-      <section className="border-t-8  border-neutral-900 py-8">
+      <section className="border-t-8 border-neutral-900 py-8">
         <Footer />
       </section>
     </div>
