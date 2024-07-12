@@ -7,30 +7,23 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <div className="relative flex h-1/2 w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent">
-      {/* <Image
-        src={BackgroundImage}
-        alt="Background image"
-        className="hidden sm:flex sm:object-over -z-10 brightness-50"
-        priority
-        fill
-      /> */}
+    <div className="relative flex h-1/2 w-screen flex-col md:items-center md:justify-center md:bg-transparent z-50">
       <Link href="/">
         <Image
           src={Logo}
           alt="Logonetnetflix image"
           width={120}
           height={120}
-          className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
+          className="absolute left-10 top-4 object-contain md:left-40 md:top-6"
           priority
         />
       </Link>
       <Link href="/auth/login">
         <Button
           variant="destructive"
-          className="absolute right-4 top-4 object-contain md:right-10 md:top-6"
+          className="absolute right-10 top-4 object-contain md:right-40 md:top-6"
         >
-          Connecter
+          S&apos;identifer
         </Button>
       </Link>
     </div>

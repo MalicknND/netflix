@@ -20,7 +20,7 @@ export default function AuthLayout({
           alt="Logonetnetflix image"
           width={120}
           height={120}
-          className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
+          className="absolute left-4 top-4 object-contain md:left-40 md:top-6"
           priority
         />
       </Link>
