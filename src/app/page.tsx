@@ -17,11 +17,11 @@ export default function Home() {
           <h1 className="text-white font-bold text-[1.5rem] mt-4 mb-4 sm:text-[3rem]">
             Films et séries en illimité, et bien plus
           </h1>
-          <h2 className="text-white text-[25px] mb-4 ">
+          <h2 className="text-white text-[1.3rem] mb-4 ">
             Où que vous soyez. Annulez à tout moment.
           </h2>
           <div className="mt-1.5 mx-0 ">
-            <p className="text-white text-[18px] mb-4">
+            <p className="text-white text-[1rem] mb-4">
               Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous
               abonner ou réactiver votre <br />
               abonnement.
