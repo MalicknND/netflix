@@ -4,6 +4,7 @@ import Logo from "../../../../public/images/logonetflix.png";
 import BackgroundImage from "../../../../public/images/background.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import SelectComp from "@/components/Select/Select";
 
 const Header = () => {
   return (
@@ -21,11 +22,14 @@ const Header = () => {
       <Link href="/auth/login">
         <Button
           variant="destructive"
-          className="absolute right-10 top-4 object-contain md:right-40 md:top-6"
+          className="absolute right-10 top-4 object-contain md:right-40 md:top-6 bg-[#E50815]"
         >
           S&apos;identifer
         </Button>
       </Link>
+      <div className="absolute right-36 top-4 object-contain md:right-72 md:top-6">
+        <SelectComp />
+      </div>
     </div>
   );
 };
